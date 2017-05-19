@@ -11,6 +11,8 @@
 		A85F943B1ECF57E6004F849F /* FEMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A85F943A1ECF57E6004F849F /* FEMonitor.m */; };
 		A85F943E1ECF6621004F849F /* PictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A85F943D1ECF6621004F849F /* PictureViewController.m */; };
 		A85F94401ECF6649004F849F /* spaceship.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A85F943F1ECF6649004F849F /* spaceship.jpg */; };
+		A85F94451ECF6ED2004F849F /* FECrashHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A85F94441ECF6ED2004F849F /* FECrashHandler.m */; };
+		A85F94481ECF7319004F849F /* CrashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A85F94471ECF7319004F849F /* CrashViewController.m */; };
 		A8704BBA1ECE9F1200163318 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8704BB91ECE9F1200163318 /* main.m */; };
 		A8704BBD1ECE9F1200163318 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8704BBC1ECE9F1200163318 /* AppDelegate.m */; };
 		A8704BC01ECE9F1200163318 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8704BBF1ECE9F1200163318 /* ViewController.m */; };
@@ -48,6 +50,10 @@
 		A85F943C1ECF6621004F849F /* PictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureViewController.h; sourceTree = "<group>"; };
 		A85F943D1ECF6621004F849F /* PictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureViewController.m; sourceTree = "<group>"; };
 		A85F943F1ECF6649004F849F /* spaceship.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spaceship.jpg; sourceTree = "<group>"; };
+		A85F94431ECF6ED2004F849F /* FECrashHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FECrashHandler.h; sourceTree = "<group>"; };
+		A85F94441ECF6ED2004F849F /* FECrashHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FECrashHandler.m; sourceTree = "<group>"; };
+		A85F94461ECF7319004F849F /* CrashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrashViewController.h; sourceTree = "<group>"; };
+		A85F94471ECF7319004F849F /* CrashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrashViewController.m; sourceTree = "<group>"; };
 		A8704BB51ECE9F1200163318 /* FERunLoop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FERunLoop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8704BB91ECE9F1200163318 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A8704BBB1ECE9F1200163318 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -100,6 +106,8 @@
 			children = (
 				A85F94391ECF57E5004F849F /* FEMonitor.h */,
 				A85F943A1ECF57E6004F849F /* FEMonitor.m */,
+				A85F94431ECF6ED2004F849F /* FECrashHandler.h */,
+				A85F94441ECF6ED2004F849F /* FECrashHandler.m */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -180,6 +188,8 @@
 				A85F94361ECF4370004F849F /* TimerViewController.m */,
 				A85F943C1ECF6621004F849F /* PictureViewController.h */,
 				A85F943D1ECF6621004F849F /* PictureViewController.m */,
+				A85F94461ECF7319004F849F /* CrashViewController.h */,
+				A85F94471ECF7319004F849F /* CrashViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -318,10 +328,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A85F94481ECF7319004F849F /* CrashViewController.m in Sources */,
 				A85F94371ECF4370004F849F /* TimerViewController.m in Sources */,
 				A8704BEE1ECEA4C100163318 /* ThreadViewController.m in Sources */,
 				A8704BF11ECEAC2600163318 /* FEThread.m in Sources */,
 				A8704BC01ECE9F1200163318 /* ViewController.m in Sources */,
+				A85F94451ECF6ED2004F849F /* FECrashHandler.m in Sources */,
 				A85F943B1ECF57E6004F849F /* FEMonitor.m in Sources */,
 				A85F943E1ECF6621004F849F /* PictureViewController.m in Sources */,
 				A8704BBD1ECE9F1200163318 /* AppDelegate.m in Sources */,
