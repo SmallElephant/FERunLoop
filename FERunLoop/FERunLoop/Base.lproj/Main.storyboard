@@ -47,6 +47,17 @@
                                     <segue destination="Vn6-ol-GNw" kind="show" id="cPi-7X-ttI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR1-ph-Cf5">
+                                <rect key="frame" x="50" y="142" width="275" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50196078430000002" green="0.80392156859999997" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="定时器">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ccM-1C-amF" kind="show" id="f30-iF-JDr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -60,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="97" y="-540"/>
+            <point key="canvasLocation" x="96.799999999999997" y="-540.17991004497753"/>
         </scene>
         <!--Thread View Controller-->
         <scene sceneID="lsH-yB-eVL">
@@ -103,6 +114,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="27Z-jv-2Hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="821.60000000000002" y="-548.27586206896558"/>
+        </scene>
+        <!--Timer View Controller-->
+        <scene sceneID="s0c-Xd-dTy">
+            <objects>
+                <viewController id="ccM-1C-amF" customClass="TimerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ecd-l4-RRz"/>
+                        <viewControllerLayoutGuide type="bottom" id="Okv-cv-yYF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P9t-NV-VY1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aqd-Do-8yT">
+                                <rect key="frame" x="0.0" y="264" width="375" height="403"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QN9-dg-CD6">
+                                <rect key="frame" x="50" y="77" width="275" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.40257878800000002" blue="0.299906173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2b-fa-ARL">
+                                <rect key="frame" x="50" y="129" width="275" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.40257878800000002" blue="0.299906173" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y2b-fa-ARL" firstAttribute="leading" secondItem="P9t-NV-VY1" secondAttribute="leading" constant="50" id="561-eu-OuB"/>
+                            <constraint firstAttribute="trailing" secondItem="aqd-Do-8yT" secondAttribute="trailing" id="704-r3-enX"/>
+                            <constraint firstAttribute="trailing" secondItem="Y2b-fa-ARL" secondAttribute="trailing" constant="50" id="Ji5-23-YaQ"/>
+                            <constraint firstAttribute="trailing" secondItem="QN9-dg-CD6" secondAttribute="trailing" constant="50" id="Kc8-a8-qVd"/>
+                            <constraint firstItem="Okv-cv-yYF" firstAttribute="top" secondItem="aqd-Do-8yT" secondAttribute="bottom" id="Ljj-pJ-nkM"/>
+                            <constraint firstItem="QN9-dg-CD6" firstAttribute="leading" secondItem="P9t-NV-VY1" secondAttribute="leading" constant="50" id="NcX-qv-3GB"/>
+                            <constraint firstItem="aqd-Do-8yT" firstAttribute="top" secondItem="Ecd-l4-RRz" secondAttribute="bottom" constant="200" id="SNP-gI-H6L"/>
+                            <constraint firstItem="aqd-Do-8yT" firstAttribute="leading" secondItem="P9t-NV-VY1" secondAttribute="leading" id="bk2-co-QXQ"/>
+                            <constraint firstItem="Y2b-fa-ARL" firstAttribute="top" secondItem="QN9-dg-CD6" secondAttribute="bottom" constant="31" id="qvB-oT-bGS"/>
+                            <constraint firstItem="Y2b-fa-ARL" firstAttribute="top" secondItem="P9t-NV-VY1" secondAttribute="top" constant="129" id="x7R-ft-JPV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomTimeLabel" destination="Y2b-fa-ARL" id="T8j-9d-43m"/>
+                        <outlet property="upTimeLabel" destination="QN9-dg-CD6" id="fPy-CW-vLv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eW2-Hz-j3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="824.79999999999995" y="88.605697151424295"/>
         </scene>
     </scenes>
 </document>

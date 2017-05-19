@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A85F94371ECF4370004F849F /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A85F94361ECF4370004F849F /* TimerViewController.m */; };
 		A8704BBA1ECE9F1200163318 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8704BB91ECE9F1200163318 /* main.m */; };
 		A8704BBD1ECE9F1200163318 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8704BBC1ECE9F1200163318 /* AppDelegate.m */; };
 		A8704BC01ECE9F1200163318 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8704BBF1ECE9F1200163318 /* ViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A85F94351ECF4370004F849F /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		A85F94361ECF4370004F849F /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		A8704BB51ECE9F1200163318 /* FERunLoop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FERunLoop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8704BB91ECE9F1200163318 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A8704BBB1ECE9F1200163318 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 				A8704BED1ECEA4C100163318 /* ThreadViewController.m */,
 				A8704BEF1ECEAC2600163318 /* FEThread.h */,
 				A8704BF01ECEAC2600163318 /* FEThread.m */,
+				A85F94351ECF4370004F849F /* TimerViewController.h */,
+				A85F94361ECF4370004F849F /* TimerViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A85F94371ECF4370004F849F /* TimerViewController.m in Sources */,
 				A8704BEE1ECEA4C100163318 /* ThreadViewController.m in Sources */,
 				A8704BF11ECEAC2600163318 /* FEThread.m in Sources */,
 				A8704BC01ECE9F1200163318 /* ViewController.m in Sources */,
@@ -529,6 +535,7 @@
 				A8704BE41ECE9F1200163318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8704BE51ECE9F1200163318 /* Build configuration list for PBXNativeTarget "FERunLoopTests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +544,7 @@
 				A8704BE71ECE9F1200163318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8704BE81ECE9F1200163318 /* Build configuration list for PBXNativeTarget "FERunLoopUITests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +553,7 @@
 				A8704BEA1ECE9F1200163318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

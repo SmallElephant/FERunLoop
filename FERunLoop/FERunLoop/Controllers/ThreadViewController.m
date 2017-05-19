@@ -62,9 +62,9 @@
 - (void)threadWork1 {
     NSLog(@"执行---threadWork1");
     NSLog(@"子线程RunLoop模式--%@",[NSRunLoop currentRunLoop].currentMode);
-    NSLog(@"%@----FlyElephant开始",[NSThread currentThread]);
+    NSLog(@"FlyElephant---%@开始",[NSThread currentThread]);
     [NSThread sleepForTimeInterval:3.0];
-    NSLog(@"%@----FlyElephant结束",[NSThread currentThread]);
+    NSLog(@"FlyElephant---%@结束",[NSThread currentThread]);
 }
 
 - (void)threadWork2 {
@@ -83,9 +83,9 @@
 - (void)taskThreadOpetion {
     NSLog(@"执行---threadWork2");
     NSLog(@"子线程RunLoop模式--%@",[NSRunLoop currentRunLoop].currentMode);
-    NSLog(@"%@----FlyElephant开始",[NSThread currentThread]);
+    NSLog(@"FlyElephant---%@开始",[NSThread currentThread]);
     [NSThread sleepForTimeInterval:3.0];
-    NSLog(@"%@----FlyElephant结束",[NSThread currentThread]);
+    NSLog(@"FlyElephant---%@结束",[NSThread currentThread]);
 }
 
 #pragma mark - Actions
