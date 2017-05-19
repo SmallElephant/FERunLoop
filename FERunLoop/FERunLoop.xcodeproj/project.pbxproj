@@ -15,6 +15,8 @@
 		A8704BC81ECE9F1200163318 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8704BC61ECE9F1200163318 /* LaunchScreen.storyboard */; };
 		A8704BD31ECE9F1200163318 /* FERunLoopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8704BD21ECE9F1200163318 /* FERunLoopTests.m */; };
 		A8704BDE1ECE9F1200163318 /* FERunLoopUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8704BDD1ECE9F1200163318 /* FERunLoopUITests.m */; };
+		A8704BEE1ECEA4C100163318 /* ThreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8704BED1ECEA4C100163318 /* ThreadViewController.m */; };
+		A8704BF11ECEAC2600163318 /* FEThread.m in Sources */ = {isa = PBXBuildFile; fileRef = A8704BF01ECEAC2600163318 /* FEThread.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		A8704BD91ECE9F1200163318 /* FERunLoopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FERunLoopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8704BDD1ECE9F1200163318 /* FERunLoopUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FERunLoopUITests.m; sourceTree = "<group>"; };
 		A8704BDF1ECE9F1200163318 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8704BEC1ECEA4C100163318 /* ThreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThreadViewController.h; sourceTree = "<group>"; };
+		A8704BED1ECEA4C100163318 /* ThreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThreadViewController.m; sourceTree = "<group>"; };
+		A8704BEF1ECEAC2600163318 /* FEThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEThread.h; sourceTree = "<group>"; };
+		A8704BF01ECEAC2600163318 /* FEThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEThread.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 				A8704BBC1ECE9F1200163318 /* AppDelegate.m */,
 				A8704BBE1ECE9F1200163318 /* ViewController.h */,
 				A8704BBF1ECE9F1200163318 /* ViewController.m */,
+				A8704BEB1ECEA4A900163318 /* Controllers */,
 				A8704BC11ECE9F1200163318 /* Main.storyboard */,
 				A8704BC41ECE9F1200163318 /* Assets.xcassets */,
 				A8704BC61ECE9F1200163318 /* LaunchScreen.storyboard */,
@@ -138,6 +145,17 @@
 				A8704BDF1ECE9F1200163318 /* Info.plist */,
 			);
 			path = FERunLoopUITests;
+			sourceTree = "<group>";
+		};
+		A8704BEB1ECEA4A900163318 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A8704BEC1ECEA4C100163318 /* ThreadViewController.h */,
+				A8704BED1ECEA4C100163318 /* ThreadViewController.m */,
+				A8704BEF1ECEAC2600163318 /* FEThread.h */,
+				A8704BF01ECEAC2600163318 /* FEThread.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +291,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8704BEE1ECEA4C100163318 /* ThreadViewController.m in Sources */,
+				A8704BF11ECEAC2600163318 /* FEThread.m in Sources */,
 				A8704BC01ECE9F1200163318 /* ViewController.m in Sources */,
 				A8704BBD1ECE9F1200163318 /* AppDelegate.m in Sources */,
 				A8704BBA1ECE9F1200163318 /* main.m in Sources */,

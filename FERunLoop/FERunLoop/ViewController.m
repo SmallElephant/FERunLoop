@@ -26,9 +26,6 @@
 }
 
 
-- (IBAction)threadAction:(UIButton *)sender {
-    
-}
 
 
 @end
