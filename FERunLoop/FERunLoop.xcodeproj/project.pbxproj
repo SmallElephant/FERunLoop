@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A85F94371ECF4370004F849F /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A85F94361ECF4370004F849F /* TimerViewController.m */; };
+		A85F943B1ECF57E6004F849F /* FEMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A85F943A1ECF57E6004F849F /* FEMonitor.m */; };
+		A85F943E1ECF6621004F849F /* PictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A85F943D1ECF6621004F849F /* PictureViewController.m */; };
+		A85F94401ECF6649004F849F /* spaceship.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A85F943F1ECF6649004F849F /* spaceship.jpg */; };
 		A8704BBA1ECE9F1200163318 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8704BB91ECE9F1200163318 /* main.m */; };
 		A8704BBD1ECE9F1200163318 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8704BBC1ECE9F1200163318 /* AppDelegate.m */; };
 		A8704BC01ECE9F1200163318 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8704BBF1ECE9F1200163318 /* ViewController.m */; };
@@ -40,6 +43,11 @@
 /* Begin PBXFileReference section */
 		A85F94351ECF4370004F849F /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		A85F94361ECF4370004F849F /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
+		A85F94391ECF57E5004F849F /* FEMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEMonitor.h; sourceTree = "<group>"; };
+		A85F943A1ECF57E6004F849F /* FEMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEMonitor.m; sourceTree = "<group>"; };
+		A85F943C1ECF6621004F849F /* PictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureViewController.h; sourceTree = "<group>"; };
+		A85F943D1ECF6621004F849F /* PictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureViewController.m; sourceTree = "<group>"; };
+		A85F943F1ECF6649004F849F /* spaceship.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = spaceship.jpg; sourceTree = "<group>"; };
 		A8704BB51ECE9F1200163318 /* FERunLoop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FERunLoop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8704BB91ECE9F1200163318 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A8704BBB1ECE9F1200163318 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -87,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A85F94381ECF5794004F849F /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A85F94391ECF57E5004F849F /* FEMonitor.h */,
+				A85F943A1ECF57E6004F849F /* FEMonitor.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		A8704BAC1ECE9F1200163318 = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +132,9 @@
 				A8704BBE1ECE9F1200163318 /* ViewController.h */,
 				A8704BBF1ECE9F1200163318 /* ViewController.m */,
 				A8704BEB1ECEA4A900163318 /* Controllers */,
+				A85F94381ECF5794004F849F /* Manager */,
 				A8704BC11ECE9F1200163318 /* Main.storyboard */,
+				A85F943F1ECF6649004F849F /* spaceship.jpg */,
 				A8704BC41ECE9F1200163318 /* Assets.xcassets */,
 				A8704BC61ECE9F1200163318 /* LaunchScreen.storyboard */,
 				A8704BC91ECE9F1200163318 /* Info.plist */,
@@ -159,6 +178,8 @@
 				A8704BF01ECEAC2600163318 /* FEThread.m */,
 				A85F94351ECF4370004F849F /* TimerViewController.h */,
 				A85F94361ECF4370004F849F /* TimerViewController.m */,
+				A85F943C1ECF6621004F849F /* PictureViewController.h */,
+				A85F943D1ECF6621004F849F /* PictureViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -269,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A85F94401ECF6649004F849F /* spaceship.jpg in Resources */,
 				A8704BC81ECE9F1200163318 /* LaunchScreen.storyboard in Resources */,
 				A8704BC51ECE9F1200163318 /* Assets.xcassets in Resources */,
 				A8704BC31ECE9F1200163318 /* Main.storyboard in Resources */,
@@ -300,6 +322,8 @@
 				A8704BEE1ECEA4C100163318 /* ThreadViewController.m in Sources */,
 				A8704BF11ECEAC2600163318 /* FEThread.m in Sources */,
 				A8704BC01ECE9F1200163318 /* ViewController.m in Sources */,
+				A85F943B1ECF57E6004F849F /* FEMonitor.m in Sources */,
+				A85F943E1ECF6621004F849F /* PictureViewController.m in Sources */,
 				A8704BBD1ECE9F1200163318 /* AppDelegate.m in Sources */,
 				A8704BBA1ECE9F1200163318 /* main.m in Sources */,
 			);

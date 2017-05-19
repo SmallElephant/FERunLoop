@@ -58,6 +58,17 @@
                                     <segue destination="ccM-1C-amF" kind="show" id="f30-iF-JDr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhI-ZL-itu">
+                                <rect key="frame" x="50" y="208" width="275" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.50196078430000002" green="0.80392156859999997" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="滑动优化">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zNI-Ld-Lwc" kind="show" id="r0k-k5-bHm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -114,6 +125,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="27Z-jv-2Hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="821.60000000000002" y="-548.27586206896558"/>
+        </scene>
+        <!--Picture View Controller-->
+        <scene sceneID="5MT-ml-hWd">
+            <objects>
+                <viewController id="zNI-Ld-Lwc" customClass="PictureViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WIr-FF-ikc"/>
+                        <viewControllerLayoutGuide type="bottom" id="uAI-tK-cyt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Uto-er-RWE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MOx-j3-kSa">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="zNI-Ld-Lwc" id="cIL-9m-wKS"/>
+                                    <outlet property="delegate" destination="zNI-Ld-Lwc" id="T6W-rb-fh5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MOx-j3-kSa" firstAttribute="top" secondItem="WIr-FF-ikc" secondAttribute="bottom" id="adf-k6-U6U"/>
+                            <constraint firstItem="uAI-tK-cyt" firstAttribute="top" secondItem="MOx-j3-kSa" secondAttribute="bottom" id="g8K-3e-Ri8"/>
+                            <constraint firstItem="MOx-j3-kSa" firstAttribute="leading" secondItem="Uto-er-RWE" secondAttribute="leading" id="kkv-DT-Xzy"/>
+                            <constraint firstAttribute="trailing" secondItem="MOx-j3-kSa" secondAttribute="trailing" id="pgt-cX-svm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="MOx-j3-kSa" id="cef-Zk-Hft"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ksZ-ht-HRU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="97" y="98"/>
         </scene>
         <!--Timer View Controller-->
         <scene sceneID="s0c-Xd-dTy">
