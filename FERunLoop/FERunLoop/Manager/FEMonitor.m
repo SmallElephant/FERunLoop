@@ -66,6 +66,12 @@ static dispatch_once_t   onceToken;
     }
     
     // 1.创建observer
+    //第一个参数用于分配observer对象的内存
+    //第二个参数用以设置observer所要关注的事件，详见回调函数myRunLoopObserver中注释
+    //第三个参数用于标识该observer是在第一次进入run loop时执行还是每次进入run loop处理时均执行
+    //第四个参数用于设置该observer的优先级
+    //第五个参数用于设置该observer的回调函数
+    //第六个参数用于设置该observer的运行环境
     CFRunLoopObserverContext context = {0,(__bridge void*)self, NULL, NULL, NULL};
     _observer = CFRunLoopObserverCreate(kCFAllocatorDefault,
                                         kCFRunLoopAllActivities,
