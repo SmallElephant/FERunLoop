@@ -21,6 +21,16 @@
 
 @property (strong, nonatomic) NSTimer *bottomTimer;
 
+@property (strong, nonatomic) NSTimer *timer1;
+
+@property (strong, nonatomic) NSTimer *timer2;
+
+@property (strong, nonatomic) NSTimer *timer3;
+
+@property (strong, nonatomic) NSTimer *timer4;
+
+@property (strong, nonatomic) NSMutableArray *data;
+
 @end
 
 @implementation TimerViewController
@@ -29,7 +39,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setUp];
+//    [self setUp];
+    [self setup1];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -97,6 +108,25 @@
 }
 
 
+#pragma mark - Private
+
+- (void)updateData1 {
+    NSLog(@"updateData1方法执行");
+}
+
+- (void)updateData2 {
+    NSLog(@"updateData2方法执行");
+}
+
+- (void)updateData3 {
+    NSLog(@"updateData3方法执行");
+}
+
+- (void)updateData4 {
+    NSLog(@"updateData4方法执行");
+}
+
+
 #pragma mark - SetUp
 
 - (void)setUp {
@@ -106,6 +136,15 @@
     [self.upTimer fire];
     
     self.bottomTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(bottomTimeUpdate) userInfo:nil repeats:YES];
+    
+}
+
+- (void)setup1 {
+    
+    self.timer1 = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateData1) userInfo:nil repeats:YES];
+    self.timer2 = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateData2) userInfo:nil repeats:YES];
+    self.timer3 = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateData3) userInfo:nil repeats:YES];
+    self.timer4 = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateData4) userInfo:nil repeats:YES];
     
 }
 
