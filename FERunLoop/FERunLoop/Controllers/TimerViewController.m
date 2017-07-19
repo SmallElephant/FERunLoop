@@ -39,9 +39,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupObserver];
     [self setUp];
 //    [self setup1];
-    [self setupObserver];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -132,9 +132,9 @@
 
 - (void)setUp {
     
-    self.upTimer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(upTimeUpdate) userInfo:nil repeats:NO];
-    [[NSRunLoop currentRunLoop] addTimer:self.upTimer forMode:NSRunLoopCommonModes];
-    [self.upTimer fire];
+//    self.upTimer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(upTimeUpdate) userInfo:nil repeats:NO];
+//    [[NSRunLoop currentRunLoop] addTimer:self.upTimer forMode:NSRunLoopCommonModes];
+//    [self.upTimer fire];
     
     self.bottomTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(bottomTimeUpdate) userInfo:nil repeats:NO];
     
@@ -155,7 +155,7 @@
     CFRunLoopObserverRef obeserver =  CFRunLoopObserverCreateWithHandler(alloc, kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
         switch (activity) {
             case kCFRunLoopEntry:
-                NSLog(@"进入循环");
+                NSLog(@"进入循环");// 线程最开始进入加入创建自动释放池
                 break;
             case kCFRunLoopBeforeTimers:
                 NSLog(@"处理定时器才做之前");
@@ -164,13 +164,16 @@
                 NSLog(@"处理事件源，输入源之前");
                 break;
             case kCFRunLoopBeforeWaiting:
-                NSLog(@"休眠之前");
+                NSLog(@"休眠之前");// 休眠之前，释放之前的释放池，创建新的释放池
                 break;
             case kCFRunLoopAfterWaiting:
                 NSLog(@"休眠以后");
                 break;
             case kCFRunLoopExit:
                 NSLog(@"循环退出");
+                break;
+            case kCFRunLoopAllActivities:
+                NSLog(@"kCFRunLoopAllActivities");
                 break;
         }
     });
