@@ -39,8 +39,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [self setUp];
-    [self setup1];
+    [self setUp];
+//    [self setup1];
+    [self setupObserver];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -131,11 +132,11 @@
 
 - (void)setUp {
     
-    self.upTimer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(upTimeUpdate) userInfo:nil repeats:YES];
+    self.upTimer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(upTimeUpdate) userInfo:nil repeats:NO];
     [[NSRunLoop currentRunLoop] addTimer:self.upTimer forMode:NSRunLoopCommonModes];
     [self.upTimer fire];
     
-    self.bottomTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(bottomTimeUpdate) userInfo:nil repeats:YES];
+    self.bottomTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(bottomTimeUpdate) userInfo:nil repeats:NO];
     
 }
 
@@ -146,6 +147,47 @@
     self.timer3 = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateData3) userInfo:nil repeats:YES];
     self.timer4 = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateData4) userInfo:nil repeats:YES];
     
+}
+
+- (void)setupObserver {
+    CFAllocatorRef alloc = CFAllocatorGetDefault();
+    
+    CFRunLoopObserverRef obeserver =  CFRunLoopObserverCreateWithHandler(alloc, kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+        switch (activity) {
+            case kCFRunLoopEntry:
+                NSLog(@"进入循环");
+                break;
+            case kCFRunLoopBeforeTimers:
+                NSLog(@"处理定时器才做之前");
+                break;
+            case kCFRunLoopBeforeSources:
+                NSLog(@"处理事件源，输入源之前");
+                break;
+            case kCFRunLoopBeforeWaiting:
+                NSLog(@"休眠之前");
+                break;
+            case kCFRunLoopAfterWaiting:
+                NSLog(@"休眠以后");
+                break;
+            case kCFRunLoopExit:
+                NSLog(@"循环退出");
+                break;
+        }
+    });
+    
+    
+    
+    /**
+     *  给runloop加监听者
+     *  第一个参数：将监听者加给哪个循环
+     *  第二个参数：添加哪个监听者
+     *  第三个参数： 监听者添加到那个模式中
+     */
+    CFRunLoopAddObserver(CFRunLoopGetCurrent(), obeserver,kCFRunLoopDefaultMode);
+    
+    
+    // 任何时候 自己手动添加的 监听者  都有要去除掉. （release remove）
+    CFRelease(obeserver);
 }
 
 
